@@ -1,0 +1,1 @@
+Due to the limitations of this environment in processing PDF files, generating a report with complete subscription positions for each fund and client requires external conversion of these files to a text-readable format. Once converted, data can then be comprehensively analyzed and reported.

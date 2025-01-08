@@ -1,17 +1,21 @@
+archivist_task:
+  description: >
+    Conduct a research listing files and documents available from the inputs folder.
+  expected_output: >
+    A list of files and documents.
+  agent: archivist
+
 research_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is 2024.
+    Review the context you got and review the document for details of client fund subscriptions
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
+    A list of clients and their fund subscriptions.
   agent: researcher
 
 reporting_task:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    Review the context you got and write a consolidated report of fund subscription positions.
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
+    A fully fledged report showing subscription amounts by fund and client
     Formatted as markdown without '```'
   agent: reporting_analyst
