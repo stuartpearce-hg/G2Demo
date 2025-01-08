@@ -1,0 +1,15 @@
+{
+	"name": "CrewAI Example",
+	"image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu-24.04",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot-chat",
+				"GitHub.copilot"
+			]
+		}
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": {}
+	}
+}
