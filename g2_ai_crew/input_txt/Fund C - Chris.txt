@@ -1,0 +1,11 @@
+Fund C
+GP: Gen II Fund Services LLC
+LP: Chris Bockus
+Commitment: $100,000
+Payment Instructions:
+123 Bank LLC
+ABA 123456789
+Account name: Chris Bockus
+Account Number: 555-5555
+FFC: Investor ID 4444
+FFC Acct: payment clearing account

@@ -1,4 +1,1 @@
-User name is John Doe.
-User is an AI Engineer.
-User is interested in AI Agents.
-User is based in San Francisco, California.
+User is a fund adminstrator working on private equity funds and needs to extract meaningful datapoints from these documents.

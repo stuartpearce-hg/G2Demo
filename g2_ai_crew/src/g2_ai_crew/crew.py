@@ -1,39 +1,24 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
-from crewai_tools import DirectoryReadTool,FileReadTool,PDFSearchTool
+from crewai_tools import DirectoryReadTool,FileReadTool,TXTSearchTool
 import os
+from convertpdf import PDFToTextConverter
+
 from dotenv import load_dotenv
 
 load_dotenv()
+
+converter = PDFToTextConverter("inputs", "input_txt")
+converter.convert_pdfs_to_txt()
 
 # If you want to run a snippet of code before or after the crew starts, 
 # you can use the @before_kickoff and @after_kickoff decorators
 # https://docs.crewai.com/concepts/crews#example-crew-class-with-decorators
 
 # Instantiate tools
-docs_tool = DirectoryReadTool(directory='./inputs')
+docs_tool = DirectoryReadTool(directory='./input_txt')
 file_tool = FileReadTool()
-pdf_tool = PDFSearchTool(
-    config=dict(
-        llm=dict(
-            provider="azure_openai", # or google, openai, anthropic, llama2, ...
-            config=dict(
-                model=os.getenv('model'),
-                # temperature=0.5,
-                # top_p=1,
-                # stream=true,
-            ),
-        ),
-        embedder=dict(
-            provider="azure_openai", # or openai, ollama, ...
-            config=dict(
-                model=os.getenv('AZURE_EMBEDDINGS_NAME'),
-                task_type="retrieval_document",
-                # title="Embeddings",
-            ),
-        ),
-    )
-)
+txt_tool = TXTSearchTool()
 
 @CrewBase
 class G2AiCrew():

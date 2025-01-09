@@ -1,0 +1,11 @@
+Fund B
+GP: Hg Capital
+LP: Stuart Pearce
+Commitment: $1000000
+Payment Instructions:
+123 Bank LLC
+ABA 123456789
+Account name: Stuart Pearce
+Account Number: 888-8888
+FFC: Investor ID 3333
+FFC Acct: payment clearing account
